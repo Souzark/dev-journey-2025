@@ -39,3 +39,11 @@
 ---
 
 ✨ **Nota:** Este README será atualizado constantemente. Acompanhe minha evolução!
+## 📅 Diário de Bordo
+
+✅ **Dia 2:** Primeiro código em Node.js!
+🔗 [Commit](https://github.com/souzark/dev-journey-2025/commit/abc123)
+
+✅ **Dia 1:** Primeiro código em Node.js!
+🔗 [Commit](https://github.com/souzark/dev-journey-2025/commit/)
+
