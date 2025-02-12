@@ -16,7 +16,7 @@
 | Dia | Tópico | Status | Link |
 |-----|--------|--------|------|
 | 1   | Primeiros passos com JavaScript | ✅ | [Dia 1](/dia-1) |
-| 2   | Funções e Callbacks | 🕒 | [Dia 2](/dia-2) |
+| 2   | Funções e Callbacks | ✔ | [Dia 2](/dia-2) |
 
 ---
 
