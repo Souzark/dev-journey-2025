@@ -51,3 +51,8 @@ Funções e callbacks!
 ✅ **Dia 1:** Primeiro código em Node.js!
 🔗 [Commit](https://github.com/souzark/dev-journey-2025/commit/)
 
+## 📅 Diário de Bordo
+
+✅ **Dia 2:** Primeiro código em Node.js!
+🔗 [Commit](https://github.com/Souzark/dev-journey-2025/commit/4bec4ca)
+
