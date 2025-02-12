@@ -1,32 +1,26 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs');  
+const path = require('path');  
 
-// Configurações
-const DIARIO = `## 📅 Diário de Bordo\n\n`;
-const DIA = 2; // Atualize para o dia atual
-const COMMIT_HASH = 'abc123'; // Substitua pelo hash real do commit
-const CONTEUDO = `✅ **Dia ${DIA}:** Primeiro código em Node.js!\n🔗 [Commit](https://github.com/souzark/dev-journey-2025/commit/${COMMIT_HASH})\n\n`;
+// Configurações  
+const DIARIO = `## 📅 Diário de Bordo\n\n`; // Cabeçalho  
+const DIA = 2; // Mude este número a cada dia!  
+const CONTEUDO = `✅ **Dia ${DIA}:** 
+Funções e callbacks!\n🔗 [Commit](https://github.com/Souzark/dev-journey-2025/commit/)\n\n`;  
 
-// Função para ler o README
-function lerReadme(caminho) {
-  return fs.existsSync(caminho) ? fs.readFileSync(caminho, 'utf8') : '';
-}
+// Caminho do README  
+const readmePath = path.join(__dirname, 'README.md');  
 
-// Função para atualizar o README
-function atualizarReadme(caminho, conteudo) {
-  let readmeContent = lerReadme(caminho);
-  if (!readmeContent.includes(`**Dia ${DIA}:**`)) {
-    if (!readmeContent.includes(DIARIO)) {
-      readmeContent += DIARIO;
-    }
-    readmeContent = readmeContent.replace(DIARIO, DIARIO + conteudo);
-    fs.writeFileSync(caminho, readmeContent);
-    console.log(`✅ README atualizado com sucesso para o Dia ${DIA}!`);
-  } else {
-    console.log(`⚠️ O Dia ${DIA} já está registrado.`);
-  }
-}
+// Verifica se o README existe  
+if (!fs.existsSync(readmePath)) {  
+  fs.writeFileSync(readmePath, DIARIO); // Cria o README se não existir  
+}  
 
-// Executar atualização
-const readmePath = path.join(__dirname, 'README.md');
-atualizarReadme(readmePath, CONTEUDO);
+// Atualiza o README  
+let readmeContent = fs.readFileSync(readmePath, 'utf8');  
+if (!readmeContent.includes(DIARIO)) {  
+  readmeContent += DIARIO;  
+}  
+readmeContent = readmeContent.replace(DIARIO, DIARIO + CONTEUDO);  
+fs.writeFileSync(readmePath, readmeContent);  
+
+console.log('README atualizado com sucesso! 🌟');  
